@@ -1,4 +1,5 @@
 import os
+import sys
 
 ########################################################################
 #   Original Implementation by Larry Kheriarty in 1978                 #
@@ -79,7 +80,17 @@ def Waduzitdo(source):
                 PrNL()
         Loc+=1
 
-
+def editor():
+    ret = ""
+    print("Waduzitdoo-PY V 1.0.")
+    print("<c> 2024-2030 JP Programi")
+    print("Input commands. Type 'EOF' to run.")
+    uns = ""
+    while uns!="EOF":
+        uns=input('>')
+        if uns!="EOF":
+            ret+=uns+"\n"
+    return ret
 
 def main():
     source = """T:,-------------,
@@ -94,8 +105,16 @@ NT:Nö, so nicht
 NJ:0
 T:Ende
 S:"""
-    Waduzitdo(source);
-
+    if len(sys.argv)>1:
+        try:
+            f=open(sys.argv[1])
+            source = f.read()
+            Waduzitdo(source)
+        except:
+            print("Error reading file. File is not presend and/or corrupt.")
+    else:
+        source = editor()
+        Waduzitdo(source)
 
 if __name__ == "__main__":
     main()
