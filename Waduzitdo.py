@@ -2,7 +2,7 @@ import os
 import sys
 
 ########################################################################
-#   Original Implementation by Larry Kheriarty in 1978                 #
+#   Original Implementation by Larry Kheriaty in 1978                 #
 #   JavaScript and DHTML in 2006 by Hans Franke                        #
 #   Written by Petar Jovanovic 2024                                    #
 #   Special thanks to Tyler Zahnke                                     #
@@ -55,8 +55,7 @@ def Waduzitdo(source):
                     Loc = Last-1
                 else:
                     while Loc<End and i>0:
-                        Loc+=1
-                        if source[Loc]=="*":
+                        if source[++Loc]=="*":
                             i-=1
             
             elif CBUF=="S":
@@ -83,7 +82,7 @@ def Waduzitdo(source):
 
 def editor():
     ret = ""
-    print("Waduzitdo-PY V 1.0.")
+    print("Waduzitdoo-PY V 1.0.")
     print("<c> 2024-2030 JP Programi")
     print("Input commands. Type 'EOF' to run.")
     uns = ""
