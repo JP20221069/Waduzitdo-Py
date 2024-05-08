@@ -55,7 +55,8 @@ def Waduzitdo(source):
                     Loc = Last-1
                 else:
                     while Loc<End and i>0:
-                        if source[++Loc]=="*":
+                        Loc+=1
+                        if source[Loc]=="*":
                             i-=1
             
             elif CBUF=="S":
@@ -82,7 +83,7 @@ def Waduzitdo(source):
 
 def editor():
     ret = ""
-    print("Waduzitdoo-PY V 1.0.")
+    print("Waduzitdo-PY V 1.0.")
     print("<c> 2024-2030 JP Programi")
     print("Input commands. Type 'EOF' to run.")
     uns = ""
