@@ -9,7 +9,7 @@ import sys
 ########################################################################
 
 def Cls():
-    os.system('cls');
+    os.system('cls')
 
 def PrChar(c):
     print(c,end='')
@@ -18,18 +18,18 @@ def PrNL():
     print()
 
 def GetChar():
-    str = input('?');
-    ch=str[0];
-    return ch;
+    str = input('?')
+    ch=str[0]
+    return ch
 
 def Waduzitdo(source):
-    Loc=0;
-    End = len(source)-1;
-    CBUF= " ";
+    Loc=0
+    End = len(source)-1
+    CBUF= " "
 
-    Acc=" ";
-    Flg=" ";
-    Last=0;
+    Acc=" "
+    Flg=" "
+    Last=0
 
     while(Loc<End):
         CBUF=source[Loc]
@@ -55,7 +55,8 @@ def Waduzitdo(source):
                     Loc = Last-1
                 else:
                     while Loc<End and i>0:
-                        if source[++Loc]=="*":
+                        Loc += 1
+                        if source[Loc]=="*":
                             i-=1
             
             elif CBUF=="S":
